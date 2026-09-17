@@ -1,3 +1,10 @@
+## <mark style="background:#ff4d4f">  NOTAS  </mark>
+Una red computacional es un sistema complejo de intercambio de informacion, requiriendo una combinacion de infraestructura fisica y reglas logicas para una comunicacion efectiva.
+##### <mark style="background:#fff88f">  Los 5 pilares de una Red Computacional:  </mark>
+
+1. Nodos
+Los protocolos son estadares para enviar datos.
+2. 
 ### Actividad 1.1
 
 Que esperan aprender de esta materia ?
