@@ -1,3 +1,5 @@
+## <mark style="background:#ff4d4f">NOTAS</mark>
+Los IXP sirven para crear rutas mas cortas para el trafico de intenet.
 ### Clase Dia Martes 22 de Septiembre 2026
 
 ##### Clasificacion de Redes :
@@ -44,3 +46,13 @@ La diferencias entre ellas no es que tecnologia usan, sino quien las administra 
 | **802.11n**  | 2009 | 2.4 GHz y 5 GHz                   | 600 Mbps            | Conocido como **Wi-Fi 4**. Revolucionó la conectividad al introducir la tecnología **MIMO** (uso de múltiples antenas para transmisión y recepción) y soporte de doble banda, multiplicando drásticamente la capacidad y la distancia de la señal.            |
 | **802.11ac** | 2013 | 5 GHz                             | 433 Mbps a 6.9 Gbps | Conocido como **Wi-Fi 5**. Diseñado exclusivamente para la banda de 5 GHz. Introdujo **MU-MIMO** y canales mucho más amplios para permitir transmisiones ultrarrápidas simultáneas a múltiples dispositivos en entornos densos.                               |
 | **802.11ax** | 2019 | 2.4 GHz, 5 GHz y 6 GHz (Wi-Fi 6E) | 9.6 Gbps            | Conocido como **Wi-Fi 6** (y **Wi-Fi 6E**). Orientado a la alta eficiencia en entornos saturados de dispositivos. Incorpora **OFDMA** para gestionar múltiples usuarios a la vez con menor latencia y reduce el consumo de batería de los equipos conectados. |
+
+##### Que es el internet ?
+Son millones de redes LAN y WLAN conectadas entre si, ninguna empresa ni gobierno administra internet como un todo, cada red que la compone es administrada de forma independiente y se conecta a las demas por acuerdo mutuo.
+- Que la hace funcionar?
+TCP/IP (Protocolo).
+- Como se conectan entre si ?
+A traves de proveedores de servicios de internet (ISP), organizados en niveles : los ISP locales se conectan a otros mas grandes, y estos entre si, hasta formar la red global. Los puntos de intercambio (IXP) son sitios fisicos donde distintos ISP conectan su trafico directamente entre si, en lugar de enviarlo por una ruta mas larga. En resumen reducen latencia y costo de trafico.
+
+
+
