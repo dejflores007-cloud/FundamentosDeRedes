@@ -99,3 +99,18 @@
 ### Actividad 3.1
 Figura explicando porque los cables van en pares.
 ![[Pasted image 20261015163945.png]]
+
+### Actividad 3.2
+Por que los puntos de intercambio reducen la latencia ?
+Porque la latencia depende de cuantos saltos y los puntos de intercambio reducen esos saltos.
+## Clases
+### Clase Dia Martes 20 de Octubre 2026
+
+##### Tipos de cable : Cobre
+1. UTP
+2. FTP
+3. STP
+4. SFTP  
+
+##### Tipos de cable : Fibra Optica
+La fibra optica usa pulsos de luz, llega a mayores distancias y es inmune a la interferencia electromagnetica, pero es mas costosa y delicada de instalar.
