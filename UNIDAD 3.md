@@ -114,3 +114,37 @@ Porque la latencia depende de cuantos saltos y los puntos de intercambio reducen
 
 ##### Tipos de cable : Fibra Optica
 La fibra optica usa pulsos de luz, llega a mayores distancias y es inmune a la interferencia electromagnetica, pero es mas costosa y delicada de instalar.
+
+### Clase Dia Jueves 22 de Octubre 2026
+
+Nombre: Diego Juarez
+
+Campo 1
+Dato de ejemplo: 10101010 10101010 10101010 10101010 10101010 10101010 10101010 10101011 (8 bytes)
+Nombre del campo: Preambulo y SFD
+Para qué sirve: Los primeros 7 bytes (Preambulo) sincronizan los relojes de los dispositivos emisor y receptor en la red. El último byte (conocido como SFD) marca el inicio exacto de la trama.
+
+Campo 2
+Dato de ejemplo: FFFF.FFFF.FFFF (6 bytes)
+Nombre del campo: Direccion MAC de destino
+Para qué sirve: Identifica al destinatario en la capa de enlace de datos, lo que significa que la trama debe ser procesada por todos los dispositivos en ese segmento de red.
+
+Campo 3
+Dato de ejemplo: 0001.4321.ABCD (6 bytes)
+Nombre del campo: Direccion MAC de origen
+Para qué sirve: Identifica fisicamente al dispositivo que está enviando la trama dentro de la red local.
+
+Campo 4
+Dato de ejemplo: 0x0806 (2 bytes)
+Nombre del campo: Tipo / EtherType
+Para qué sirve: Indica que protocolo de capa de red esta encapsulado en la carga util de la trama para que el receptor sepa como procesarlo.
+
+Campo 5
+Dato de ejemplo: ¿Quién tiene la IP 192.168.1.2? Responde a 192.168.1.1 (entre 46 y 1500 bytes)
+Nombre del campo: Datos (Payload)
+Para qué sirve: Contiene la informacion o el mensaje proveniente de los protocolos de capas superiores que se esta transportando a traves de la red.
+
+Campo 6
+Dato de ejemplo: 0x3A7F91C2 (4 bytes)
+Nombre del campo: Secuencia de Comprobacion de Trama
+Para qué sirve: Es un mecanismo de deteccion de errores de 4 bytes situado al final de la trama. El dispositivo emisor genera un valor matematico basado en el contenido de la trama y lo coloca aqui, el receptor realiza el mismo calculo para asegurarse de que los datos no se hayan corrompido o alterado durante la transmisión fisica.
