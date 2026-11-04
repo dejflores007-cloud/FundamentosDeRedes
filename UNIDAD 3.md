@@ -103,6 +103,14 @@ Figura explicando porque los cables van en pares.
 ### Actividad 3.2
 Por que los puntos de intercambio reducen la latencia ?
 Porque la latencia depende de cuantos saltos y los puntos de intercambio reducen esos saltos.
+
+### Actividad 3.3 
+
+|                 | Switch de Capa 2                                                                                                                                                  | Switch de Capa 3                                                                                                                                                                     |
+| :-------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **¿Qué son?**   | Dispositivo que conecta equipos dentro de una misma red local (LAN) guiándose por direcciones físicas.                                                            | Dispositivo avanzado que funciona como switch y router, capaz de conectar y dirigir tráfico entre distintas redes.                                                                   |
+| **Diferencias** | • Opera solo en la **Capa 2** (Enlace).<br>• Usa direcciones **MAC**.<br>• No puede comunicar diferentes VLANs por sí solo.<br>• Hardware más básico y económico. | • Opera en la **Capa 3** (Red) y Capa 2.<br>• Usa direcciones **IP** (además de MAC).<br>• Comunica y enruta tráfico entre VLANs directamente.<br>• Hardware más avanzado y costoso. |
+|                 |                                                                                                                                                                   |                                                                                                                                                                                      |
 ## Clases
 ### Clase Dia Martes 20 de Octubre 2026
 
@@ -148,3 +156,14 @@ Campo 6
 Dato de ejemplo: 0x3A7F91C2 (4 bytes)
 Nombre del campo: Secuencia de Comprobacion de Trama
 Para qué sirve: Es un mecanismo de deteccion de errores de 4 bytes situado al final de la trama. El dispositivo emisor genera un valor matematico basado en el contenido de la trama y lo coloca aqui, el receptor realiza el mismo calculo para asegurarse de que los datos no se hayan corrompido o alterado durante la transmisión fisica.
+
+### Clase Dia Martes 03 de Noviembre 2026
+##### Switch de Capa 2
+Decide por donde reenviar usando solo la direccion MAC de la tabla y su tavla de direcciones MAC
+
+##### Switch de Capa 3
+Ademas de conmutar por MAC, puede enrutar usando la direccion IP del paquete y su tabla de rutas, y conecta varias redes o VLAN entre si
+
+#### El Switch reemplaza a un router ?
+No del todo, porque el router sigue siendo mejor para conectar con el exterior (WAN, Internet) y para funciones como NAT. El switch de capa 3 se usa en campus y centros de datos para enrutar entre VLAN a alta velocidad.
+
