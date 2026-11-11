@@ -167,3 +167,20 @@ Ademas de conmutar por MAC, puede enrutar usando la direccion IP del paquete y s
 #### El Switch reemplaza a un router ?
 No del todo, porque el router sigue siendo mejor para conectar con el exterior (WAN, Internet) y para funciones como NAT. El switch de capa 3 se usa en campus y centros de datos para enrutar entre VLAN a alta velocidad.
 
+##### Fibra Monomodo
+Tiene un nucleo muy delgado (cerca de 9 micras) por donde viaja un solo haz de luz, generado con laser, alcanza decenas de kilometros
+
+##### Fibra Multimodo
+Tiene un nucleo mas grueso (50 o 62.5 micras) por donde viajan carios haces a la vez, generados con LED, sirve para distancias cortas, como dentro de un edificio o un campus.
+
+##### Transceptores (SFP)
+Es un modulo intercambiable que se inserta en el puerto del switch o router y convierte la senal electrica en luz y la luz en senal electrica, se elige segun el tipo de fibra, la distancia y la velocidad
+
+##### Donde se usa la Fibra
+En el back home de Internet, en los cables submarinos, en los enlaces entre edificios de un campus y en los centros de datos
+
+##### UTP frente a fibra optica
+UPT : senal electrica, hasta 100m, economico, sensible a la interferencia
+Fibra : pulsos de luz, desde cientos de metros hasta decenas de kilometros, mas costosa,
+
+
