@@ -1,3 +1,13 @@
+## Actividades
+### Actividad 5.1
+
+|        | Que es ? | Para que sirve ? |
+| ------ | -------- | ---------------- |
+| Capa 2 |          |                  |
+| Capa 3 |          |                  |
+| Capa 4 |          |                  |
+
+
 ## Clases
 ### Clase Dia Martes 17 de Noviembre 2026
 
@@ -23,7 +33,7 @@ Para salir usan NAT.
 
 Su función principal es permitir que múltiples dispositivos dentro de una **red privada** (LAN) compartan una única **dirección IP pública** para conectarse a Internet.
 
-### Tipos principales de NAT
+#### Tipos principales de NAT
 
 | **Tipo**               | **Descripción**                                                                                                                            | **Uso común**                                                                |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
@@ -36,3 +46,45 @@ Su función principal es permitir que múltiples dispositivos dentro de una **re
 
 #### Direcciones IPv4
 una dirección IPv4 tiene 32 bits escritos en 4 octetos decimales separados por puntos, como 192.169.1.10; una parte identifica la red y la otra el host.
+
+### Clase Dia Jueves 19 de Noviembre 2026
+#### DHCP
+
+* **Definición:** El **DHCP** (*Protocolo de configuración dinámica de host*) es un servicio que asigna direcciones IP automáticamente a los equipos de la red.
+* **Ventajas:** Evita configurar cada equipo a mano y previene conflictos por direcciones duplicadas.
+* **Parámetros entregados:** El servidor entrega IP, máscara de subred, puerta de enlace y DNS.
+* **Proceso DORA (4 pasos):**
+  1. **Discover:** Primer mensaje enviado como *broadcast*.
+  2. **Offer:** El servidor ofrece una configuración IP disponible.
+  3. **Request:** El cliente solicita la dirección ofrecida.
+  4. **Acknowledge:** El servidor confirma y asigna la concesión.
+
+| Paso | Mensaje | Quién lo envía | Qué hace |
+|---|---|---|---|
+| 1 | Discover | Cliente (broadcast) | Busca un servidor DHCP en la red. |
+| 2 | Offer | Servidor | Ofrece una dirección IP disponible. |
+| 3 | Request | Cliente (broadcast) | Pide la dirección ofrecida. |
+| 4 | Acknowledge | Servidor | Confirma y entrega la configuración. |
+#### Tiempo de concesión
+
+* **Préstamo temporal:** La dirección se entrega en **préstamo** por un **tiempo de concesión** (*lease*), no de forma permanente.
+* **Renovación:** El cliente **renueva** a la mitad del tiempo.
+* **Comandos en Windows:**
+  * `ipconfig /release`: libera la dirección.
+  * `ipconfig /renew`: pide otra.
+
+#### El pool de direcciones
+
+* **Funcionamiento:** El servidor reparte direcciones de un **pool** (rango) y entrega con ellas la **máscara**, la **puerta de enlace** y el **DNS**.
+* **Exclusiones y reservas:** Las direcciones fijas de servidores, impresoras y routers se **excluyen** del pool, o se **reservan** por dirección MAC.
+* **Ejemplo de configuración DHCP:**
+  * **Pool Name:** `DHCP_P1`
+  * **Gateway por Defecto:** `201.10.220.90`
+  * **Servidor DNS:** `201.10.220.90`
+  * **Inicio de la Dirección IP:** `201.10.248.0`
+  * **Subnet Mask:** `255.255.252.0`
+
+#### Puertos y relevo de DHCP
+
+* **Puertos UDP:** DHCP utiliza **UDP**; el servidor escucha en el **puerto 67** y el cliente en el **68**.
+* **Relevo (*relay*):** Como el *broadcast* no cruza *routers*, un *router* configurado con `ip helper-address` reenvía las solicitudes a un servidor DHCP ubicado en otra red.
